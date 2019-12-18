@@ -1,0 +1,30 @@
+#+TITLE: ffmpeg-cmake-cpp
+
+Simple empty project with a CMake config for using the FFmpeg library. 
+Copypasta from:
+
+https://github.com/rambodrahmani/ffmpeg-video-player
+
+https://github.com/bartjoyce/ffmpeg-cmake-example
+
+* ubuntu 
+install dev libs:
+
+#+begin_src sh
+  sudo apt install libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavresample-dev libavutil-dev
+#+end_src
+
+a typical manual buid without cmake
+#+begin_src sh 
+  mkdir build
+  gcc -g -Wall -o build/hello_world 0_hello_world.c -lavformat -lavcodec -lswscale -lavutil -lz
+#+end_src
+
+with cmake:
+
+#+begin_src sh 
+  mkdir build
+  cd build
+  cmake ../
+  make
+#+end_src
